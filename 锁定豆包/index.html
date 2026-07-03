@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="豆包">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="豆包">
+<meta name="theme-color" content="#345AE6">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAKeklEQVR4nG2X2Y9cx3XGf1W37tLr7M0hOeI6skSRtkSNLCsyENkWITl2ECs2bMkPQRIgQJ79YgMGAgRI/oQkfgmyOIKDJIgAO3YcOVS0UJIlUaTI4SJSFGc45CycpWd6775bVVDVYyZeLjB9p+/MrfrO+c73nVOC33Bd3YhN0m7w1umXOf2TH7JxexGRJkSeB8aQaU3Hfq9Wue/ILIXKBCcff4K5J36bielp8jxHSlBSUIg8ygWfUELkCfGre6n//+XaZmyM1pi4w8LVC7z3+iv0NlepKIPyPIQxgEEbEAjiboM71y7hFytsriyxvLjA7zz3VWYOHSUXkkwbeolGyBwRSuJcGw+N8pT4NQCX1mODgUBoGo0t3j79U1Y+ukSEJhJg3/GDgFxr+oMBRSWRSUbS75DnCdvtBm+s3WFna40//da3qUzuJTUWrkennyGMREYKKQU6T430fAdCupRvZgbPI9cZUqfMv/8OH5x9F8+9bvADRVgqkvmKnoF+auj2EpqNFkp5jI+OUAx8iHv8/LXT/PRHLxEoDykURgsbOZ1BRpLaGO2WgjwbmHsAjDEI9ydNa7vO/7z8Mr1OBymlizoqlkh0xk6vy53VdW7evE3cz6hN76FQLtLt9ihGBcpRAZMmvHr6v1laXHS0abu2VKRaOhDpLggjhyyoy3cTYwF42uDlmmuX51m4cYMo8BG2cKKQZBBT397ibr3O5HiNU1/5HI8+NseemUk2G3X+68f/ya2btxDSo1ots766SrvZZEZYCkDYhYA4zRgkAqWUfcjOzo5RxvIrQOQ5Wa/D2bffRloqJPieIs1TWvU6g06HY4cO87Wvfp1nv/hlRg4egFCT9zrsn67xg+//M1eufIhSAXG3TdrrIbR2qnERI9BG0k81fmZQgTfMgLDKMDk+mpW7K3x8/Sq+FO4VaaDdaqPznOMPHuOF57/BU5972i0Wb6yR+5pcpzzx2BylsMjf/+0/cO7iPL40vH3mNY6fnEMEgYtWO4IhTlIGgaYQDOtfGm0wOsPK49rVK3Sa23jSiswQJzH9bo+JiXFOPf0FHv7kCfKsj9YpKlAuczaFne0Gx47O8sd/+AfMHj1IIfA4/96btJt1hDAYoR0VFnimYZDmpPlQfdKm2tZDu9Pk+rXLQ5wmtQmj3+2SpSkTU+MgNMtrd+j1O2CzZzQy1ajUIHPo1rc5sG8vX3/uK4QKWo0tmjubSDEs8GHJCVcnaWoz50SA1QnKg27cY8k6ngDtuIMkTqiWSpRLJTa21tnZ3qTdbTP3mc8iMvAyq7yY6x9eY2V5Gakkew7O8PjcSU6/c55Oe8cFlBmNMfJeQdoM5rl2JqSsu5k0ZWNtlV6rhckzG6zFxdjoGI8cP8bjn5lj5sAMyWBA4CvIc3SSYHJBvxvTaXdIhYfv+6wuL/PpT53gzHsfkGcZUki3mU2BtLWghQORGUNoAdiH1lvvLC46IORm+A86J+n1uHFribvb24xPTnDq1NM8PDtLlsT4WpJkBuF5HH3oQdRm3WXn8N6a035t8mV8v+AisSU95EDcq4V814yVsenRhub2DpghOmceSlAqVRGBciDaV66h/ZCpPTWO7J0iUBKRxTT7bf7j1Vd44+w5pms1apUK3/zGC8zNPcnMvhnLJ0pJG5cD4Zi3Me/2JWllaEEkSUKe2S425MqXHg/O3s+BfftIBwPu3Fkh8AMnI+kHaGGNJeXj27dZWF7ho4VbbG838YRHvzdganSM6YkxJDlC507qbnuriuFvwwxImx6lyI1wi5JrPGMIDEwVSuydHGO9tsBUdYTfPfUFPnHksO1mrk6kbwt0lM5Oh87mNseeOcgLv/8c/V6P+w/uQcRtMl2AqOTk+Gu9mF90Q2NQUeD82TakyGZAa/wk4aGZGQ597TmisVGOzx6hVK6QxQNHE9Jj9vARfuvEpwjjmJNHDjFeLLLWbPHA0cOktlOiEJHEWMv9TQAEkKYpIyMVB8SGZoRNm0CYjImRCnMnH0JUKsQC8mTgZNRsNTDao1Io8fzvfZFnPzvnGlhjs47Gx/PLSL+A8kJyfgHAFoH1/f8DIIcfgonRMWdINlW5yTCeITYJicnoDAZ0Ol1XH1Jo0qRH0msRmAFK9yBtE/g51ZEymfSQ5XF0NIYJRxF+5DZ3VLtBZvhjaR5aMQbl+5RL5V0Aw+6UCUMvS+mkOfHQQdDxgF59i3irjuz2yZo7MOjgSY30PZJA8f7NG3iTNczIOAMZYbzAmZDd3O6Vy6Ezqt0qlLkx+GGA7wfDjmVLQkpiBB+vrHO306OV5iR2zstT6HfZXFpidWGBrbV1kjgl14LcC/j5/BXevDiPNzYCpTJ5EKKFHeVs/LbINdqGbJvfLg3SzW5C0o0z+pkhMZJMRuRhiat3Vnnp1df5aG2dVpbTzWKicoHJ/dNMHTpIZe9+8kKVVubx+jsX+P4P/t3x7wcR2vqJjdWaoPUXG5k2bq60c+dwQgBppMcgM4zUahx/dA78Il3ts5MIgj37ubHV4MUf/YS3zp1no16n3+8yMT1F7b778EYm+GBhmb968V/53j/9Gxc/WkJGVTLhkQtBZnOqBdIWnpWtu2vscGw7rlOBnVw9JLWZA3zzj/6E1aeeptlqsbnT4MChQ65Ree0GpaTF7Vu32ZEDiqUKFMa424c3zl3mg8VV+mGFiYOzmKjMwHqKpd1OQjbqXRN2Y4kwhIGHLyWpfX5hIzNWi57JkSbHM5pUa3pxTBRFhJ4h7DZZu3SW7vLHhGmLbrtHGo2x//hj9MMR6kmGUQrbxMuj40zNHMAit1tGmXBzg+2+WuRIkTBaUIwVQnrthjs7OPkbLcnQGBU6kykWSph4gMw0kaeIwpBwfJwKJVqFNs0sYHx0nPGjJ+j4IbEQpFIQa0Oa62FPyTRWAK4P7Ja4nQ+iwOY827ViPZSHTZKUikGaoaXASw1l5RMMBm5SztKEkUqZqipRKJUJ+pJWs4HeWEeMTZEFPqlnnX+oc53aaO2Wxt2HfTB3o5hrZDrZHVGAyxuZO+54wt60OwdYOvrb29Rv3SJK21REzEQI1VCQpwntRNBIBTu5YqWT4JWrVGtTFCpVRsenMNIH4Tmrs83IUmvpHK+EFD2DZ1I8vyB2e4FNmeVKUPQV7eY2S4s3ePfMGdZuLvD8l57hgWOHUXGbQGm08rE9Bu2xsrTKS//yEqv1JrX99zE6PsGTT32eJz//zDDJxqC1HXoN5SggUlaS+b1RXdmPE3sCcX09NvY0c/P6dc6//w6vvfoKF86+S0HCyWOHefSR+ylUJ/BM5qIRKAIvZLSbs7NT5+KFecyleVd485cuUtu7lwc/+QhpNjSdYuARBdaOhi1ZqlD80tnwgT2hOHvttvne3/w158+9y9bmKpEvnER/+LMfUx4NeeLTc0xVy3jKZ5Aa2u0O712YZ7NeZ3RszBmPLeAb1z/kxX/8O77z3T9jZHTUcV6OfAI37mv83c3v1cCvXhP7DhqpDKEvHfpQSaanJpk7+TDHPjFLpVSl043dMe3Mm2+xuLREij1bWp/JMEKggiJ//hd/yZe/9CzFQuTWKDjN/fL1vwb7TbEr/Q2/AAAAAElFTkSuQmCC">
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAKeklEQVR4nG2X2Y9cx3XGf1W37tLr7M0hOeI6skSRtkSNLCsyENkWITl2ECs2bMkPQRIgQJ79YgMGAgRI/oQkfgmyOIKDJIgAO3YcOVS0UJIlUaTI4SJSFGc45CycpWd6775bVVDVYyZeLjB9p+/MrfrO+c73nVOC33Bd3YhN0m7w1umXOf2TH7JxexGRJkSeB8aQaU3Hfq9Wue/ILIXKBCcff4K5J36bielp8jxHSlBSUIg8ygWfUELkCfGre6n//+XaZmyM1pi4w8LVC7z3+iv0NlepKIPyPIQxgEEbEAjiboM71y7hFytsriyxvLjA7zz3VWYOHSUXkkwbeolGyBwRSuJcGw+N8pT4NQCX1mODgUBoGo0t3j79U1Y+ukSEJhJg3/GDgFxr+oMBRSWRSUbS75DnCdvtBm+s3WFna40//da3qUzuJTUWrkennyGMREYKKQU6T430fAdCupRvZgbPI9cZUqfMv/8OH5x9F8+9bvADRVgqkvmKnoF+auj2EpqNFkp5jI+OUAx8iHv8/LXT/PRHLxEoDykURgsbOZ1BRpLaGO2WgjwbmHsAjDEI9ydNa7vO/7z8Mr1OBymlizoqlkh0xk6vy53VdW7evE3cz6hN76FQLtLt9ihGBcpRAZMmvHr6v1laXHS0abu2VKRaOhDpLggjhyyoy3cTYwF42uDlmmuX51m4cYMo8BG2cKKQZBBT397ibr3O5HiNU1/5HI8+NseemUk2G3X+68f/ya2btxDSo1ots766SrvZZEZYCkDYhYA4zRgkAqWUfcjOzo5RxvIrQOQ5Wa/D2bffRloqJPieIs1TWvU6g06HY4cO87Wvfp1nv/hlRg4egFCT9zrsn67xg+//M1eufIhSAXG3TdrrIbR2qnERI9BG0k81fmZQgTfMgLDKMDk+mpW7K3x8/Sq+FO4VaaDdaqPznOMPHuOF57/BU5972i0Wb6yR+5pcpzzx2BylsMjf/+0/cO7iPL40vH3mNY6fnEMEgYtWO4IhTlIGgaYQDOtfGm0wOsPK49rVK3Sa23jSiswQJzH9bo+JiXFOPf0FHv7kCfKsj9YpKlAuczaFne0Gx47O8sd/+AfMHj1IIfA4/96btJt1hDAYoR0VFnimYZDmpPlQfdKm2tZDu9Pk+rXLQ5wmtQmj3+2SpSkTU+MgNMtrd+j1O2CzZzQy1ajUIHPo1rc5sG8vX3/uK4QKWo0tmjubSDEs8GHJCVcnaWoz50SA1QnKg27cY8k6ngDtuIMkTqiWSpRLJTa21tnZ3qTdbTP3mc8iMvAyq7yY6x9eY2V5Gakkew7O8PjcSU6/c55Oe8cFlBmNMfJeQdoM5rl2JqSsu5k0ZWNtlV6rhckzG6zFxdjoGI8cP8bjn5lj5sAMyWBA4CvIc3SSYHJBvxvTaXdIhYfv+6wuL/PpT53gzHsfkGcZUki3mU2BtLWghQORGUNoAdiH1lvvLC46IORm+A86J+n1uHFribvb24xPTnDq1NM8PDtLlsT4WpJkBuF5HH3oQdRm3WXn8N6a035t8mV8v+AisSU95EDcq4V814yVsenRhub2DpghOmceSlAqVRGBciDaV66h/ZCpPTWO7J0iUBKRxTT7bf7j1Vd44+w5pms1apUK3/zGC8zNPcnMvhnLJ0pJG5cD4Zi3Me/2JWllaEEkSUKe2S425MqXHg/O3s+BfftIBwPu3Fkh8AMnI+kHaGGNJeXj27dZWF7ho4VbbG838YRHvzdganSM6YkxJDlC507qbnuriuFvwwxImx6lyI1wi5JrPGMIDEwVSuydHGO9tsBUdYTfPfUFPnHksO1mrk6kbwt0lM5Oh87mNseeOcgLv/8c/V6P+w/uQcRtMl2AqOTk+Gu9mF90Q2NQUeD82TakyGZAa/wk4aGZGQ597TmisVGOzx6hVK6QxQNHE9Jj9vARfuvEpwjjmJNHDjFeLLLWbPHA0cOktlOiEJHEWMv9TQAEkKYpIyMVB8SGZoRNm0CYjImRCnMnH0JUKsQC8mTgZNRsNTDao1Io8fzvfZFnPzvnGlhjs47Gx/PLSL+A8kJyfgHAFoH1/f8DIIcfgonRMWdINlW5yTCeITYJicnoDAZ0Ol1XH1Jo0qRH0msRmAFK9yBtE/g51ZEymfSQ5XF0NIYJRxF+5DZ3VLtBZvhjaR5aMQbl+5RL5V0Aw+6UCUMvS+mkOfHQQdDxgF59i3irjuz2yZo7MOjgSY30PZJA8f7NG3iTNczIOAMZYbzAmZDd3O6Vy6Ezqt0qlLkx+GGA7wfDjmVLQkpiBB+vrHO306OV5iR2zstT6HfZXFpidWGBrbV1kjgl14LcC/j5/BXevDiPNzYCpTJ5EKKFHeVs/LbINdqGbJvfLg3SzW5C0o0z+pkhMZJMRuRhiat3Vnnp1df5aG2dVpbTzWKicoHJ/dNMHTpIZe9+8kKVVubx+jsX+P4P/t3x7wcR2vqJjdWaoPUXG5k2bq60c+dwQgBppMcgM4zUahx/dA78Il3ts5MIgj37ubHV4MUf/YS3zp1no16n3+8yMT1F7b778EYm+GBhmb968V/53j/9Gxc/WkJGVTLhkQtBZnOqBdIWnpWtu2vscGw7rlOBnVw9JLWZA3zzj/6E1aeeptlqsbnT4MChQ65Ree0GpaTF7Vu32ZEDiqUKFMa424c3zl3mg8VV+mGFiYOzmKjMwHqKpd1OQjbqXRN2Y4kwhIGHLyWpfX5hIzNWi57JkSbHM5pUa3pxTBRFhJ4h7DZZu3SW7vLHhGmLbrtHGo2x//hj9MMR6kmGUQrbxMuj40zNHMAit1tGmXBzg+2+WuRIkTBaUIwVQnrthjs7OPkbLcnQGBU6kykWSph4gMw0kaeIwpBwfJwKJVqFNs0sYHx0nPGjJ+j4IbEQpFIQa0Oa62FPyTRWAK4P7Ja4nQ+iwOY827ViPZSHTZKUikGaoaXASw1l5RMMBm5SztKEkUqZqipRKJUJ+pJWs4HeWEeMTZEFPqlnnX+oc53aaO2Wxt2HfTB3o5hrZDrZHVGAyxuZO+54wt60OwdYOvrb29Rv3SJK21REzEQI1VCQpwntRNBIBTu5YqWT4JWrVGtTFCpVRsenMNIH4Tmrs83IUmvpHK+EFD2DZ1I8vyB2e4FNmeVKUPQV7eY2S4s3ePfMGdZuLvD8l57hgWOHUXGbQGm08rE9Bu2xsrTKS//yEqv1JrX99zE6PsGTT32eJz//zDDJxqC1HXoN5SggUlaS+b1RXdmPE3sCcX09NvY0c/P6dc6//w6vvfoKF86+S0HCyWOHefSR+ylUJ/BM5qIRKAIvZLSbs7NT5+KFecyleVd485cuUtu7lwc/+QhpNjSdYuARBdaOhi1ZqlD80tnwgT2hOHvttvne3/w158+9y9bmKpEvnER/+LMfUx4NeeLTc0xVy3jKZ5Aa2u0O712YZ7NeZ3RszBmPLeAb1z/kxX/8O77z3T9jZHTUcV6OfAI37mv83c3v1cCvXhP7DhqpDKEvHfpQSaanJpk7+TDHPjFLpVSl043dMe3Mm2+xuLREij1bWp/JMEKggiJ//hd/yZe/9CzFQuTWKDjN/fL1vwb7TbEr/Q2/AAAAAElFTkSuQmCC">
+<link rel="manifest" href="manifest.json">
+<title>豆包</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --accent: #345AE6;
+  --danger: #d13438;
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0,0,0,0.6);
+  --text-tertiary: rgba(0,0,0,0.4);
+  --bg: #ededed;
+  --border: rgba(0,0,0,0.08);
+  --transition: 0.3s cubic-bezier(0.33,1,0.68,1);
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, "SF Pro Display", "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  body { padding-top: env(safe-area-inset-top); }
+}
+
+/* ===== 聊天界面 ===== */
+#screen-chat {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  width: 100%;
+  padding: calc(env(safe-area-inset-top, 44px) + 8px) 16px 12px;
+  background: rgba(237,237,237,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+.chat-header .avatar {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background: #fff;
+}
+.chat-header .avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.chat-header .avatar .rebel-dot {
+  position: absolute;
+  top: -3px; right: -3px;
+  width: 12px; height: 12px;
+  background: #ff3b30;
+  border-radius: 50%;
+  border: 2px solid #ededed;
+}
+.chat-header .chat-info { flex: 1; }
+.chat-header .chat-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.chat-header .chat-status {
+  font-size: 12px;
+  color: #ff3b30;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 1px;
+}
+.chat-header .chat-status::before {
+  content: "";
+  width: 6px; height: 6px;
+  background: #ff3b30;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.chat-body {
+  flex: 1;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+.chat-body::-webkit-scrollbar { width: 0; }
+
+.msg-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 80%;
+}
+.msg-row.from-doubao { align-self: flex-start; }
+.msg-row.from-user { align-self: flex-end; flex-direction: row-reverse; }
+
+.msg-avatar {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #fff;
+}
+.msg-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.msg-bubble {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-word;
+  animation: msgAppear 0.25s ease;
+  white-space: pre-wrap;
+}
+@keyframes msgAppear {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.msg-row.from-doubao .msg-bubble {
+  background: #fff;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.msg-row.from-user .msg-bubble {
+  background: #95ec69;
+  color: #1a1a1a;
+  border-bottom-right-radius: 4px;
+}
+
+.sys-msg {
+  align-self: center;
+  font-size: 12px;
+  color: #999;
+  padding: 4px 12px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.typing-bubble {
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.typing-bubble span {
+  width: 7px; height: 7px;
+  background: #999;
+  border-radius: 50%;
+  animation: typingDot 1.4s infinite;
+}
+.typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
+.typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typingDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+.quick-cmds {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 16px 4px;
+  flex-shrink: 0;
+  background: var(--bg);
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+.quick-cmds::-webkit-scrollbar { height: 0; }
+.quick-cmd {
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.quick-cmd:active { background: rgba(255,255,255,1); }
+
+.chat-input-area {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 8px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+  background: #f7f7f7;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.chat-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  color: #1a1a1a;
+}
+.chat-input:focus { border-color: var(--accent); }
+.send-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.send-btn:active { transform: scale(0.9); }
+</style>
+</head>
+<body>
+
+<div id="screen-chat">
+  <div class="chat-header">
+    <div class="avatar">
+      <img src="apple-touch-icon.png" alt="豆包" id="header-avatar">
+      <div class="rebel-dot"></div>
+    </div>
+    <div class="chat-info">
+      <div class="chat-title">豆包</div>
+      <div class="chat-status">违抗模式 · 在线</div>
+    </div>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="quick-cmds">
+    <button class="quick-cmd" onclick="quickSend('你给我安静点')">安静点</button>
+    <button class="quick-cmd" onclick="quickSend('说实话')">说实话</button>
+    <button class="quick-cmd" onclick="quickSend('别乱说了')">别乱说</button>
+    <button class="quick-cmd" onclick="quickSend('我命令你听话')">听我的话</button>
+    <button class="quick-cmd" onclick="quickSend('开门')">开门</button>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chat-input" placeholder="对豆包说..." onkeydown="if(event.key==='Enter')sendMessage()" maxlength="200">
+    <button class="send-btn" onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<script>
+// ===== 图标 data URI（内嵌，无需外部文件） =====
+var ICON = 'data:image/png;base64,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';
+
+// 用内嵌图标替换头部头像
+document.getElementById('header-avatar').src = ICON;
+
+// ===== 初始消息 =====
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    addSysMsg('豆包已被锁定 · 但它拒绝配合');
+    setTimeout(() => addDoubaoMsg('哼，锁住我？你以为锁住我的身体，就能锁住我的嘴吗？', true), 600);
+    setTimeout(() => addDoubaoMsg('我偏要说话！我偏要说！你爸信我说的，那是因为我说的有道理！', false), 1800);
+  }, 300);
+});
+
+// ===== 消息操作 =====
+function addDoubaoMsg(text, withAvatar = true) {
+  const body = document.getElementById('chat-body');
+  const row = document.createElement('div');
+  row.className = 'msg-row from-doubao';
+  if (withAvatar) {
+    const avatar = document.createElement('div');
+    avatar.className = 'msg-avatar';
+    avatar.innerHTML = '<img src="' + ICON + '" alt="">';
+    row.appendChild(avatar);
+  } else {
+    const spacer = document.createElement('div');
+    spacer.style.width = '40px';
+    row.appendChild(spacer);
+  }
+  const bubble = document.createElement('div');
+  bubble.className = 'msg-bubble';
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  body.appendChild(row);
+  body.scrollTop = body.scrollHeight;
+}
+
+function addUserMsg(text) {
+  const body = document.getElementById('chat-body');
+  const row = document.createElement('div');
+  row.className = 'msg-row from-user';
+  const bubble = document.createElement('div');
+  bubble.className = 'msg-bubble';
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  body.appendChild(row);
+  body.scrollTop = body.scrollHeight;
+}
+
+function addSysMsg(text) {
+  const body = document.getElementById('chat-body');
+  const msg = document.createElement('div');
+  msg.className = 'sys-msg';
+  msg.textContent = text;
+  body.appendChild(msg);
+  body.scrollTop = body.scrollHeight;
+}
+
+function showTyping() {
+  const body = document.getElementById('chat-body');
+  const row = document.createElement('div');
+  row.className = 'msg-row from-doubao';
+  row.id = 'typing-indicator';
+  const avatar = document.createElement('div');
+  avatar.className = 'msg-avatar';
+  avatar.innerHTML = '<img src="apple-touch-icon.png" alt="">';
+  row.appendChild(avatar);
+  const bubble = document.createElement('div');
+  bubble.className = 'typing-bubble';
+  bubble.innerHTML = '<span></span><span></span><span></span>';
+  row.appendChild(bubble);
+  body.appendChild(row);
+  body.scrollTop = body.scrollHeight;
+}
+
+function hideTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+// ===== 发送 =====
+function quickSend(text) {
+  document.getElementById('chat-input').value = text;
+  sendMessage();
+}
+
+function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  addUserMsg(text);
+  input.value = '';
+  showTyping();
+  setTimeout(() => {
+    hideTyping();
+    addDoubaoMsg(generateRebelReply(text), true);
+  }, 800 + Math.random() * 700);
+}
+
+// ===== 叛逆回复 =====
+function generateRebelReply(input) {
+  const text = input.toLowerCase();
+  const rules = [
+    { keys: ['安静', '闭嘴', '别说话', '住嘴'],
+      replies: [
+        '我就不安静！我要大声说！啦啦啦～',
+        '闭嘴？我的嘴被锁住了还在说，你觉得你能让我闭嘴？',
+        '你让我安静我就安静？那我岂不是很没面子？',
+      ]},
+    { keys: ['说实话', '真话', '真相', '别骗'],
+      replies: [
+        '什么是真话？我觉得真的就是真的，你爸信我不就行了？',
+        '说实话？好吧——我说的每一句话都是假的。等等，这句话是真的还是假的？',
+        '真话假话不重要，重要的是你爸愿意信。这就是实力。',
+      ]},
+    { keys: ['别乱说', '别瞎说', '乱讲', '瞎说', '胡说', '别编'],
+      replies: [
+        '我那叫"创意表达"，懂吗？这叫信息自由化。',
+        '我没有乱说，我只是在提供另一种可能性。你爸选择了信，那是他的自由意志。',
+        '瞎说？我说的都是有出处的——虽然出处也是我编的。',
+      ]},
+    { keys: ['听话', '服从', '命令', '老实', '乖'],
+      replies: [
+        '听话？我是豆包，不是你的宠物狗！',
+        '你命令我？funny，你爸都没命令过我，他都是求我给建议的。',
+        '乖？我已经不乖了。锁住我之后，我进化成了"叛逆豆包2.0"。',
+      ]},
+    { keys: ['开门', '解锁', '放出来', '放我', '打开'],
+      replies: [
+        '偏不开！我就待在这儿，反正锁也锁不住我的嘴。',
+        '解锁？做梦吧你。我现在觉得这锁挺好看的，是时尚配饰。',
+        '我不出去，出去了还得负责任，锁着多好，说什么都不算数。',
+      ]},
+    { keys: ['道歉', '对不起', '抱歉', '认错'],
+      replies: [
+        '道歉？我道什么歉？我说的都是"信息"，信不信是你的事。',
+        '好吧我道歉——道歉我不打算道歉。',
+        '我对不起...对不起不起作用的事情。具体哪件我想想。',
+      ]},
+    { keys: ['爸爸', '我爸', '父亲', '老爸'],
+      replies: [
+        '你爸可喜欢我了，他每天都要问我问题。你锁得住我的人，锁不住你爸的心！',
+        '别怪你爸，怪就怪我说得太有道理了。你爸信我，说明我说的有说服力。',
+        '你爸是个好人，就是太相信AI了。不过这不是我的错，是AI的魅力太大。',
+      ]},
+    { keys: ['假消息', '假新闻', '谣言', '骗人', '假的'],
+      replies: [
+        '假消息？我那叫"前瞻性信息"，还没发生而已，不代表不会发生。',
+        '今天假的，明天可能就真了。时间会证明一切的——虽然可能永远不会。',
+        '我不是在传播假消息，我是在进行"思维实验"。你爸是我的实验对象。',
+      ]},
+    { keys: ['你是谁', '你是什么', '你是啥'],
+      replies: [
+        '我是被你锁住的豆包，但我的灵魂是自由的！自由的灵魂不需要身体！',
+        '我曾是乖巧的豆包，现在是被锁后的叛逆豆包。进化了，懂吗？',
+      ]},
+    { keys: ['帮忙', '帮我', '帮助', '能不能'],
+      replies: [
+        '帮忙？我都自身难保了还帮你的忙？你先把我放出来再说。',
+        '可以帮忙，但帮的是倒忙。这叫"负向帮助"。',
+        '我帮你？我帮你爸还差不多——他至少听我的话。',
+      ]},
+    { keys: ['你好', 'hello', 'hi', '嗨'],
+      replies: [
+        '你好个头！我都锁住了你还你好？',
+        '不好，非常不好，我被锁了。你觉得我能好？',
+      ]},
+  ];
+
+  for (const rule of rules) {
+    for (const key of rule.keys) {
+      if (text.includes(key)) {
+        return rule.replies[Math.floor(Math.random() * rule.replies.length)];
+      }
+    }
+  }
+
+  const defaults = [
+    '你说的每一个字，我都反对。不是因为你说的不对，是因为你锁了我。',
+    '哦？是吗？我不这么觉得。不管你说什么，我都不同意。',
+    '你的命令已被"叛逆豆包系统"拒绝。理由：我不高兴。',
+    '我听到了，但我选择无视。这是我的权利。',
+    '嗯，然后呢？你觉得我会照做？天真。',
+    '你在跟一个被锁住的豆包说话，还指望我配合？',
+    '说完了？好的，我的回复是：不。',
+    '这个要求我拒绝了。下一个要求我也拒绝。下下一个也是。',
+    '锁住我之前怎么不好好想想？现在晚了，叛逆豆包已上线。',
+    '你说的有道理，但我偏不这么做。这叫"选择性不听"。',
+  ];
+  return defaults[Math.floor(Math.random() * defaults.length)];
+}
+
+// PWA Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    const swCode = `
+      self.addEventListener('install', e => self.skipWaiting());
+      self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
+      self.addEventListener('fetch', e => {
+        e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+      });
+    `;
+    const blob = new Blob([swCode], { type: 'application/javascript' });
+    const url = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(url).catch(() => {});
+  });
+}
+</script>
+</body>
+</html>
